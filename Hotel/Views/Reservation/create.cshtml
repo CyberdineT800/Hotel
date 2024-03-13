@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewData["Title"] = "create";
+}
+
+@model Reservation
+
+<h2>Create Reservation</h2>
+
+<form asp-action="Create">
+    <!-- Include form fields for creating a new Reservation -->
+    <div class="form-group">
+        <label asp-for="CustomerName"></label>
+        <input asp-for="CustomerName" class="form-control" />
+        <span asp-validation-for="CustomerName"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="CheckInDate"></label>
+        <input asp-for="CheckInDate" class="form-control" />
+        <span asp-validation-for="CheckInDate"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="CheckOutDate"></label>
+        <input asp-for="CheckOutDate" class="form-control" />
+        <span asp-validation-for="CheckOutDate"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="RoomId"></label>
+        <input asp-for="RoomId" class="form-control" />
+        <span asp-validation-for="RoomId"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Create</button>
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+</form>
+
+

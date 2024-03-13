@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewData["Title"] = "index";
+}
+
+@model List<Booking>
+
+<h2>Booking List</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Event Name</th>
+            <th>Event Date</th>
+            <th>Location</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var booking in Model)
+        {
+            <tr>
+                <td>@booking.EventName</td>
+                <td>@booking.EventDate.ToShortDateString()</td>
+                <td>@booking.Location</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+

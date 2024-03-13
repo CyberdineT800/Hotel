@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewData["Title"] = "details";
+}
+
+@model Review
+
+<h2>Review Details</h2>
+
+<dl class="row">
+    <dt class="col-sm-2">Reviewer Name</dt>
+    <dd class="col-sm-10">@Model.ReviewerName</dd>
+
+    <dt class="col-sm-2">Rating</dt>
+    <dd class="col-sm-10">@Model.Rating</dd>
+
+    <dt class="col-sm-2">Comments</dt>
+    <dd class="col-sm-10">@Model.Comments</dd>
+
+    <!-- Include other Review details as needed -->
+</dl>
+
+<a asp-action="Index" class="btn btn-secondary">Back to List</a>
+
+

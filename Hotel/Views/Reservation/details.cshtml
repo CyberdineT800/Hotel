@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewData["Title"] = "details";
+}
+
+@model Reservation
+
+<h2>Reservation Details</h2>
+
+<dl class="row">
+    <dt class="col-sm-2">Customer Name</dt>
+    <dd class="col-sm-10">@Model.CustomerName</dd>
+
+    <dt class="col-sm-2">Check-In Date</dt>
+    <dd class="col-sm-10">@Model.CheckInDate.ToShortDateString()</dd>
+
+    <dt class="col-sm-2">Check-Out Date</dt>
+    <dd class="col-sm-10">@Model.CheckOutDate.ToShortDateString()</dd>
+
+    <dt class="col-sm-2">Room Booked</dt>
+    <dd class="col-sm-10">@Model.RoomId</dd>
+
+    <!-- Include other Reservation details as needed -->
+</dl>
+
+<a asp-action="Index" class="btn btn-secondary">Back to List</a>
+
+

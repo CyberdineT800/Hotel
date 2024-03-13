@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewData["Title"] = "edit";
+}
+
+@model Booking
+
+<h2>Edit Booking</h2>
+
+<form asp-action="Edit">
+@*     <!-- Include form fields for editing Booking details -->
+    <div class="form-group">
+        <label asp-for="CustomerName"></label>
+        <input asp-for="CustomerName" class="form-control" />
+        <span asp-validation-for="CustomerName"></span>
+    </div> *@
+
+    @* <div class="form-group">
+        <label asp-for="CheckInDate"></label>
+        <input asp-for="CheckInDate" class="form-control" />
+        <span asp-validation-for="CheckInDate"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="CheckOutDate"></label>
+        <input asp-for="CheckOutDate" class="form-control" />
+        <span asp-validation-for="CheckOutDate"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="RoomId"></label>
+        <input asp-for="RoomId" class="form-control" />
+        <span asp-validation-for="RoomId"></span>
+    </div> *@
+
+    <!-- Include other Booking details as needed -->
+
+    <button type="submit" class="btn btn-primary">Save Changes</button>
+</form>
+
+

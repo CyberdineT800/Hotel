@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewData["Title"] = "index";
+}
+
+@model List<Review>
+
+<h2>Review List</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Reviewer Name</th>
+            <th>Rating</th>
+            <th>Comments</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var review in Model)
+        {
+            <tr>
+                <td>@review.ReviewerName</td>
+                <td>@review.Rating</td>
+                <td>@review.Comments</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+

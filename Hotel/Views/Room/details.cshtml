@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewData["Title"] = "details";
+}
+
+@model Room
+
+<h2>Room Details</h2>
+
+<dl class="row">
+    <dt class="col-sm-2">Room Number</dt>
+    <dd class="col-sm-10">@Model.RoomNumber</dd>
+
+    <dt class="col-sm-2">Room Type</dt>
+    <dd class="col-sm-10">@Model.RoomType</dd>
+
+    <dt class="col-sm-2">Price per Night</dt>
+    <dd class="col-sm-10">@Model.PricePerNight</dd>
+
+    <dt class="col-sm-2">Availability</dt>
+    <dd class="col-sm-10">@((Model.IsAvailable) ? "Available" : "Occupied")</dd>
+
+    <!-- Include other Room details as needed -->
+</dl>
+
+<a asp-action="Index" asp-controller="Room" class="btn btn-secondary">Back to List</a>
+
+

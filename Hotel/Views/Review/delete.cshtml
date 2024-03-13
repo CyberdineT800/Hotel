@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewData["Title"] = "delete";
+}
+
+@model Review
+
+<h2>Delete Review</h2>
+
+<dl class="row">
+    <dt class="col-sm-2">Reviewer Name</dt>
+    <dd class="col-sm-10">@Model.ReviewerName</dd>
+
+    <dt class="col-sm-2">Rating</dt>
+    <dd class="col-sm-10">@Model.Rating</dd>
+
+    <!-- Include other Review details as needed -->
+</dl>
+
+<form asp-action="Delete">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Confirm Delete</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>
+
+

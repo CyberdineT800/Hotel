@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewData["Title"] = "delete";
+}
+
+@model Reservation
+
+<h2>Delete Reservation</h2>
+
+<dl class="row">
+    <dt class="col-sm-2">Customer Name</dt>
+    <dd class="col-sm-10">@Model.CustomerName</dd>
+
+    <!-- Include other Reservation details as needed -->
+</dl>
+
+<form asp-action="Delete">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Confirm Delete</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>
+
+
